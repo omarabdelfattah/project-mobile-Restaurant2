@@ -41,15 +41,14 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/icon_email"
+        android:padding="10dp"
         android:text="sha3toos@yahoo.com"
-        app:layout_constraintStart_toEndOf="@id/icon_email"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@id/icon_email"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="10dp"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        />
+        app:layout_constraintStart_toEndOf="@id/icon_email"
+        app:layout_constraintTop_toTopOf="@id/icon_email" />
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
