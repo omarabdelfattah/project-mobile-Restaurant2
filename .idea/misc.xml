@@ -18,7 +18,14 @@
         <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project/app/src/main/res/menu/bottom_menu.xml" value="0.259375" />
         <entry key="..\:/project-mobile-Restaurant/app/src/main/res/drawable/ada.xml" value="0.1895" />
         <entry key="..\:/project-mobile-Restaurant/app/src/main/res/drawable/profile.xml" value="0.1895" />
+        <entry key="..\:/project-mobile-Restaurant/app/src/main/res/layout/activity_log_in.xml" value="0.176" />
+        <entry key="..\:/project-mobile-Restaurant/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/project-mobile-Restaurant/app/src/main/res/layout/fragment_aboutus.xml" value="0.25416666666666665" />
+        <entry key="..\:/project-mobile-Restaurant/app/src/main/res/layout/fragment_cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/project-mobile-Restaurant/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/project-mobile-Restaurant/app/src/main/res/layout/fragment_offers.xml" value="0.25416666666666665" />
         <entry key="..\:/project-mobile-Restaurant/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/project-mobile-Restaurant/app/src/main/res/layout/sign_up.xml" value="0.152" />
       </map>
     </option>
   </component>
