@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/ada"
+    android:orientation="vertical"
     tools:context=".MainActivity">
     //image
+
     <de.hdodenhof.circleimageview.CircleImageView
 
         android:id="@+id/imageView"
@@ -18,26 +18,28 @@
         android:layout_gravity="center"
         android:contentDescription="string/toast"
         android:src="@drawable/sh"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
         />
     //Email
+
     <ImageView
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
+        android:id="@+id/icon_email"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:id ="@+id/icon_email"
-        android:src="@drawable/ic_baseline_email_24"
-        android:padding="10dp"
         android:layout_margin="10dp"
-
-        android:textSize="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_email_24"
         android:textAlignment="center"
+        android:textSize="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
 
         app:tint="@color/black" />
+
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -49,178 +51,159 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/icon_email"
         app:layout_constraintTop_toTopOf="@id/icon_email" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        app:layout_constraintTop_toBottomOf="@id/icon_email"
         android:background="@color/black"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/icon_email" />
 
 
     //phone
+
     <ImageView
+        android:id="@+id/icon_phone"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_phone_iphone_24"
+        android:textAlignment="center"
+        android:textSize="20dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/icon_email"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:id ="@+id/icon_phone"
-        android:src="@drawable/ic_baseline_phone_iphone_24"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-
-        android:textSize="20dp"
-        android:textAlignment="center"
 
         app:tint="@color/black" />
 
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/icon_phone"
+        android:padding="10dp"
         android:text="01121528257"
-        app:layout_constraintStart_toEndOf="@id/icon_phone"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@id/icon_phone"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="10dp"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        />
+        app:layout_constraintStart_toEndOf="@id/icon_phone"
+        app:layout_constraintTop_toTopOf="@id/icon_phone" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        app:layout_constraintTop_toBottomOf="@id/icon_phone"
         android:background="@color/black"
         android:backgroundTint="@color/black"
-        />
+        app:layout_constraintTop_toBottomOf="@id/icon_phone" />
     //Credit card
+
     <ImageView
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icon_phone"
+        android:id="@+id/icon_credit_card"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:id ="@+id/icon_credit_card"
-        android:src="@drawable/ic_baseline_credit_card_24"
-        android:padding="10dp"
         android:layout_margin="10dp"
-
-        android:textSize="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_credit_card_24"
         android:textAlignment="center"
+        android:textSize="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_phone"
         app:tint="@color/black" />
+
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/icon_credit_card"
+        android:padding="10dp"
         android:text="Your credit card number"
-        app:layout_constraintStart_toEndOf="@id/icon_credit_card"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@id/icon_credit_card"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="10dp"
-        android:textSize="25dp"
-        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/icon_credit_card"
+        app:layout_constraintTop_toTopOf="@id/icon_credit_card"
 
         />
 
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        app:layout_constraintTop_toBottomOf="@id/icon_credit_card"
         android:background="@color/black"
         android:backgroundTint="@color/black"
-        />
+        app:layout_constraintTop_toBottomOf="@id/icon_credit_card" />
     //Location on
-    <ImageView
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icon_credit_card"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:id ="@+id/icon_location_on"
-        android:src="@drawable/ic_baseline_location_on_24"
-        android:padding="10dp"
-        android:layout_margin="10dp"
 
-        android:textSize="20dp"
-        android:textAlignment="center"
-        app:tint="@color/black" />
-
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/icon_location_on"
-        android:text="Location"
-        app:layout_constraintStart_toEndOf="@id/icon_location_on"
-        app:layout_constraintBottom_toBottomOf="@id/icon_location_on"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="10dp"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        app:layout_constraintTop_toBottomOf="@id/icon_location_on"
-        android:background="@color/black"
-        />
     // Feedback
+
     <ImageView
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icon_location_on"
+        android:id="@+id/icon_contact_support"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:id ="@+id/icon_contact_support"
-        android:src="@drawable/ic_baseline_contact_support_24"
-        android:padding="10dp"
         android:layout_margin="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_contact_support_24"
 
-        android:textSize="20dp"
         android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_credit_card"
         app:tint="@color/black" />
 
     <TextView
+        android:id="@+id/textView10"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/icon_contact_support"
+        android:layout_marginTop="18dp"
+        android:padding="10dp"
         android:text="Feedback"
-        app:layout_constraintStart_toEndOf="@id/icon_contact_support"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@id/icon_contact_support"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="10dp"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/icon_contact_support"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        app:layout_constraintTop_toBottomOf="@id/icon_contact_support"
+        android:layout_marginTop="7dp"
         android:background="@color/black"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
     // info
+
     <ImageView
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icon_contact_support"
+        android:id="@+id/icon_info"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:id ="@+id/icon_info"
-        android:src="@drawable/ic_baseline_info_24"
-        android:padding="10dp"
         android:layout_margin="10dp"
-
-        android:textSize="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_info_24"
         android:textAlignment="center"
+        android:textSize="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_contact_support"
         app:tint="@color/black" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:padding="10dp"
         android:text="About us"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@id/icon_info"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/icon_info"
-        app:layout_constraintTop_toTopOf="@id/icon_info" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0" />
 
     <!--    <View-->
     <!--        android:id="@+id/view"-->
@@ -251,8 +234,6 @@
     <!--        app:layout_constraintBottom_toBottomOf="parent"-->
     <!--        app:layout_constraintStart_toEndOf="@+id/textView"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
