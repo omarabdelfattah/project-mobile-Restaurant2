@@ -62,14 +62,11 @@ public class Cart extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
     }
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_cart, container, false);
         btn = rootView.findViewById(R.id.submit);
@@ -91,7 +88,7 @@ public class Cart extends Fragment {
         np.setMinValue(1);
         np.setMaxValue(100);
 
-         np =  rootView.findViewById(R.id.numberPicker2);
+        np =  rootView.findViewById(R.id.numberPicker2);
         np.setMinValue(1);
         np.setMaxValue(100);
 
