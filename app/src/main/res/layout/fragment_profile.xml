@@ -41,6 +41,7 @@
         app:tint="@color/black" />
 
     <TextView
+        android:id="@+id/email1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -77,6 +78,7 @@
         app:tint="@color/black" />
 
     <TextView
+        android:id="@+id/phone1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="10dp"

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
  */
 public class Profile extends Fragment {
 
+    private TextView email_xml , phone_xml;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -23,6 +25,8 @@ public class Profile extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+
 
     public Profile() {
         // Required empty public constructor
@@ -59,6 +63,14 @@ public class Profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+        String phone = getActivity().getIntent().getExtras().getString("phone");
+        String email = getActivity().getIntent().getExtras().getString("email");
+
+        email_xml = (TextView)  rootView.findViewById(R.id.email1);
+        phone_xml = (TextView)  rootView.findViewById(R.id.phone1);
+        phone_xml.setText(phone);
+        email_xml.setText(email);
+        return rootView;
     }
 }
