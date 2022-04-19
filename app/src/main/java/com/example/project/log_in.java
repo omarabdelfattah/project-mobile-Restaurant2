@@ -1,6 +1,7 @@
 package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +23,6 @@ public class log_in extends AppCompatActivity {
 
     public int userId = 0;
 
-    //defining user & Admins accounts
 
 
     @Override
@@ -37,9 +37,9 @@ public class log_in extends AppCompatActivity {
 
 
         //adding testing accounts
-        Account acc1 = new Account("hady","1234","0123456789","example@gmail.com");
-        Account acc2 = new Account("joe","1234","0123456789","example@gmail.com");
-        Account acc3 = new Account("seka","1234","0123456789","example@gmail.com");
+        Account acc1 = new Account("hady","1234","0123456789","hady@gmail.com");
+        Account acc2 = new Account("joe","1234","0123456789","joe@gmail.com");
+        Account acc3 = new Account("seka","1234","0123456789","seka@gmail.com");
         Account.users.add(acc1);
         Account.users.add(acc2);
         Account.users.add(acc3);
@@ -79,8 +79,8 @@ public class log_in extends AppCompatActivity {
             int login = login();
             if (login == 1) {Toast.makeText(log_in.this,"logged in succesfully!",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, MainActivity.class);
-                intent.putExtra("email",Account.users.get(i).getE_mail());
-                intent.putExtra("phone",Account.users.get(i).getPhone());
+                intent.putExtra("email",Account.users.get(userId).getE_mail());
+                intent.putExtra("phone",Account.users.get(userId).getPhone());
                 startActivity(intent);
             } else if (login == 2) {Toast.makeText(this, "Admin logged in", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, Admin.class);

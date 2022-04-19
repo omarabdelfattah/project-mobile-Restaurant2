@@ -113,6 +113,7 @@
         app:tint="@color/black" />
 
     <TextView
+        android:id="@+id/credit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
