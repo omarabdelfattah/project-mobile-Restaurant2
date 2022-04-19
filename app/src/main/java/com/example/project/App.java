@@ -9,6 +9,7 @@ public class App extends Application
 {
     public static final String CHANNEL_1_ID = "homeChannel";
     public static final String CHANNEL_2_ID = "offerChannel";
+    public static final String CHANNEL_3_ID = "deliveryChannel";
 
 
     @Override
@@ -34,9 +35,17 @@ public class App extends Application
             );
             channel2.setDescription("new Offer Arrived!!");
 
+            NotificationChannel channel3 = new NotificationChannel(
+                    CHANNEL_3_ID,
+                    "Delivery !!",
+                    NotificationManager.IMPORTANCE_HIGH
+            );
+            channel3.setDescription("Delivery in progress");
+
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel1);
             manager.createNotificationChannel(channel2);
+            manager.createNotificationChannel(channel3);
 
         }
     }

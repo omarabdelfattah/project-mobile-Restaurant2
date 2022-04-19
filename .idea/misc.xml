@@ -8,16 +8,19 @@
         <entry key="..\:/android s/project-mobile-Restaurant/app/src/main/res/drawable/custom_button.xml" value="0.1225" />
         <entry key="..\:/android s/project-mobile-Restaurant/app/src/main/res/layout/activity_fragment_product.xml" value="0.22826086956521738" />
         <entry key="..\:/android s/project-mobile-Restaurant/app/src/main/res/layout/fragment_product.xml" value="0.136" />
-        <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/activity_admin.xml" value="0.264" />
-        <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/activity_log_in.xml" value="0.4" />
+        <entry key="..\:/faculty/Semster6/Mobile/projects/project-mobile-Restaurant/app/src/main/res/layout/activity_main.xml" value="0.1838392475416845" />
+        <entry key="..\:/faculty/Semster6/Mobile/projects/project-mobile-Restaurant/app/src/main/res/layout/activity_scrolling.xml" value="0.1851218469431381" />
+        <entry key="..\:/faculty/Semster6/Mobile/projects/project-mobile-Restaurant/app/src/main/res/layout/fragment_cart.xml" value="0.264" />
+        <entry key="..\:/faculty/Semster6/Mobile/projects/project-mobile-Restaurant/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/faculty/Semster6/Mobile/projects/project-mobile-Restaurant/app/src/main/res/layout/fragment_offers.xml" value="0.16032492518170158" />
+        <entry key="..\:/faculty/Semster6/Mobile/projects/project-mobile-Restaurant/app/src/main/res/layout/fragment_product.xml" value="0.1923899102180419" />
+        <entry key="..\:/faculty/Semster6/Mobile/projects/project-mobile-Restaurant/app/src/main/res/layout/fragment_profile.xml" value="0.20521590423257802" />
         <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/activity_main.xml" value="0.259375" />
-        <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/fragment_aboutus.xml" value="0.264" />
+        <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/fragment_aboutus.xml" value="0.259375" />
         <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/fragment_cart.xml" value="0.259375" />
         <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/fragment_offers.xml" value="0.2" />
-        <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/fragment_product.xml" value="0.259375" />
         <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/fragment_profile.xml" value="0.23424270931326435" />
-        <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/layout/sign_up.xml" value="0.152" />
         <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project-mobile-Restaurant/app/src/main/res/menu/bottom_menu.xml" value="0.259375" />
         <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project/app/src/main/res/drawable/logo.xml" value="0.2645" />
         <entry key="..\:/myStudy/yearNum3/1-Mobile App Development/4-Project/project/app/src/main/res/drawable/profile_pic.xml" value="0.113" />
@@ -49,7 +52,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.152" />
+        <option name="scale" value="0.259375" />
       </ProjectState>
     </option>
   </component>
