@@ -13,4 +13,5 @@ public class Aboutus extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_aboutus);
     }
+
 }
