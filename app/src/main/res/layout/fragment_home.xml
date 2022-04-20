@@ -8,7 +8,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,6 +23,7 @@
                 android:rowCount="4">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_row="1"
@@ -30,6 +32,7 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
+                    android:clickable="true"
                     app:cardCornerRadius="25dp"
                     app:cardElevation="8dp">
 
@@ -69,6 +72,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card2"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_row="1"
@@ -77,8 +81,10 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
+                    android:clickable="true"
                     app:cardCornerRadius="25dp"
-                    app:cardElevation="8dp">
+                    app:cardElevation="8dp"
+                    >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -124,8 +130,11 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
+                    android:clickable="true"
                     app:cardCornerRadius="25dp"
-                    app:cardElevation="8dp">
+                    app:cardElevation="8dp"
+                    android:id="@+id/card3"
+                    >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -171,8 +180,11 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
+                    android:clickable="true"
                     app:cardCornerRadius="25dp"
-                    app:cardElevation="8dp">
+                    app:cardElevation="8dp"
+                    android:id="@+id/card4"
+                    >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -218,8 +230,11 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
+                    android:clickable="true"
                     app:cardCornerRadius="25dp"
-                    app:cardElevation="8dp">
+                    app:cardElevation="8dp"
+                    android:id="@+id/card5"
+                   >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -265,13 +280,17 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
+                    android:clickable="true"
                     app:cardCornerRadius="25dp"
-                    app:cardElevation="8dp">
+                    app:cardElevation="8dp"
+                    android:id="@+id/card6"
+                   >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical|center_horizontal"
+                        android:clickable="true"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -313,8 +332,11 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
+                    android:clickable="true"
                     app:cardCornerRadius="25dp"
-                    app:cardElevation="8dp">
+                    app:cardElevation="8dp"
+                    android:id="@+id/card7"
+                    >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -360,8 +382,11 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
+                    android:clickable="true"
                     app:cardCornerRadius="25dp"
-                    app:cardElevation="8dp">
+                    app:cardElevation="8dp"
+                    android:id="@+id/card8"
+                    >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
