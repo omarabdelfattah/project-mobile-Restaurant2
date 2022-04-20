@@ -77,15 +77,24 @@ public class log_in extends AppCompatActivity {
         else
         {
             int login = login();
-            if (login == 1) {Toast.makeText(log_in.this,"logged in succesfully!",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.putExtra("email",Account.users.get(userId).getE_mail());
-                intent.putExtra("phone",Account.users.get(userId).getPhone());
-                startActivity(intent);
-            } else if (login == 2) {Toast.makeText(this, "Admin logged in", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, Admin.class);
-                startActivity(intent);
-            } else if (login == 0) {Toast.makeText(this, "wrong username or password try Again", Toast.LENGTH_SHORT).show();
+            switch (login) {
+                case 1: {
+                    Toast.makeText(log_in.this, "logged in succesfully!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(this, MainActivity.class);
+                    intent.putExtra("email", Account.users.get(userId).getE_mail());
+                    intent.putExtra("phone", Account.users.get(userId).getPhone());
+                    startActivity(intent);
+                    break;
+                }
+                case 2: {
+                    Toast.makeText(this, "Admin logged in", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(this, Admin.class);
+                    startActivity(intent);
+                    break;
+                }
+                case 0:
+                    Toast.makeText(this, "wrong username or password try Again", Toast.LENGTH_SHORT).show();
+                    break;
             }
         }
 

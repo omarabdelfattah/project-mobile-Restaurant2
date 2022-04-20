@@ -26,6 +26,9 @@ package="com.example.project">
         android:name=".Admin"
         android:exported="false"/>
     <activity
+        android:name=".Aboutus"
+        android:exported="false"/>
+    <activity
         android:name=".SignUpActivity"
         android:exported="false" />
     <activity

@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -73,4 +74,5 @@ public class Profile extends Fragment {
         email_xml.setText(email);
         return rootView;
     }
+
 }
