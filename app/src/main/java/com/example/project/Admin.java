@@ -8,7 +8,7 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.EditText;
 
 public class Admin extends AppCompatActivity {
@@ -37,14 +37,14 @@ public class Admin extends AppCompatActivity {
         String name = mealName.getText().toString();
         String description = mealDesc.getText().toString();
         String price = mealPrice.getText().toString();
-        Notification notification = new NotificationCompat.Builder(this,App.CHANNEL_1_ID)
+        Notification notification1 = new NotificationCompat.Builder(this,App.CHANNEL_1_ID)
                 .setSmallIcon(R.drawable.logo)
                 .setContentTitle(name + " Arrived!!")
                 .setContentText(description + "with price"+price+"$")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();
-        notificationManager.notify(1,notification);
+        notificationManager.notify(1,notification1);
 
     }
 
@@ -54,14 +54,14 @@ public class Admin extends AppCompatActivity {
         String description = mealDesc.getText().toString();
         String oldPrice = mealPrice.getText().toString();
         String newPrice = mealNewPrice.getText().toString();
-        Notification notification = new NotificationCompat.Builder(this,App.CHANNEL_1_ID)
+        Notification notification2 = new NotificationCompat.Builder(this,App.CHANNEL_2_ID)
                 .setSmallIcon(R.drawable.logo)
                 .setContentTitle(name + "Offer Arrived!!")
                 .setContentText(description + "with price"+newPrice+"$ instead of " + oldPrice+"$")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();
-        notificationManager.notify(2,notification);
+        notificationManager.notify(2,notification2);
     }
 
 
