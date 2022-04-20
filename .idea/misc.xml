@@ -4,6 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/drawable/logo.xml" value="0.119" />
+        <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/drawable/profile.xml" value="0.2455" />
+        <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/drawable/profile_pic.xml" value="0.2455" />
+        <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/layout/activity_log_in.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/layout/fragment_aboutus.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/layout/fragment_cart.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/layout/fragment_home.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/layout/fragment_product.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/layout/fragment_profile.xml" value="0.26313405797101447" />
         <entry key="..\:/Users/M.k/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/layout/sign_up.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/OWNER/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/drawable/ada.xml" value="0.2265" />
         <entry key="..\:/Users/OWNER/AndroidStudioProjects/project-mobile-Restaurant/app/src/main/res/drawable/logo.xml" value="0.2265" />
