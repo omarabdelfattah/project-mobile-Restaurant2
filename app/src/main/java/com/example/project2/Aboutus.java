@@ -1,7 +1,6 @@
-package com.example.project;
+package com.example.project2;
 
 import android.os.Bundle;
-import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
