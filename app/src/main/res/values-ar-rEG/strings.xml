@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">El-Akel</string>
+    <string name="or">أو</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="password">"كلمة السر "</string>
+    <string name="forgot_password">هل نسيت كلمة السر؟</string>
+    <string name="e_mail_or_username">البريد او اسم المستخدم</string>
+    <string name="need_account">هل تحتاج حساب جديد؟</string>
+    <string name="sign_up">تسجيل حساب جديد</string>
+    <string name="login1">تسجيل الدخول</string>
+</resources>
