@@ -1,12 +1,18 @@
 package com.example.project;
 
+import android.app.Notification;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.*;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +29,9 @@ public class Cart extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private NumberPicker np;
+    private Button btn;
+    private NotificationManagerCompat notificationManager;
 
     public Cart() {
         // Required empty public constructor
@@ -55,10 +64,73 @@ public class Cart extends Fragment {
         }
     }
 
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_cart, container, false);
+        btn = rootView.findViewById(R.id.submit);
+        notificationManager  = NotificationManagerCompat.from(this.getContext());
+
+        // On click submit
+        btn = rootView.findViewById(R.id.submit);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(rootView.getContext(),"Order is being handled!",Toast.LENGTH_SHORT).show();
+                sendOnChannel3(view);
+                Intent intent = new Intent(rootView.getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        np =  rootView.findViewById(R.id.numberPicker);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
+        np =  rootView.findViewById(R.id.numberPicker2);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
+        np =  rootView.findViewById(R.id.numberPicker3);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
+
+        np =  rootView.findViewById(R.id.numberPicker4);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
+
+        np =  rootView.findViewById(R.id.numberPicker5);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
+        np =  rootView.findViewById(R.id.numberPicker6);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
+        np =  rootView.findViewById(R.id.numberPicker7);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
+        np =  rootView.findViewById(R.id.numberPicker8);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
+
+        return rootView;
+    }
+
+    public void sendOnChannel3(View v)
+    {
+        Notification notification = new NotificationCompat.Builder(this.getContext(),App.CHANNEL_3_ID)
+                .setSmallIcon(R.drawable.delivery)
+                .setContentTitle("Delivery in progress 🚚!!")
+                .setContentText("Your meal is arriving in 25 minutes")
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .build();
+        notificationManager.notify(3,notification);
     }
 }

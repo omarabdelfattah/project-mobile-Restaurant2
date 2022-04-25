@@ -116,6 +116,7 @@
         app:tint="@color/black" />
 
     <TextView
+        android:id="@+id/credit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -195,10 +196,12 @@
         app:tint="@color/black" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/aboutus"
+        android:onClick="about"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:clickable="true"
         android:padding="10dp"
         android:text="About us"
         android:textColor="@color/black"

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
 package="com.example.project">
 
+
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
 <application
     android:name=".App"
     android:allowBackup="true"
@@ -26,6 +29,9 @@ package="com.example.project">
         android:name=".Admin"
         android:exported="false"/>
     <activity
+        android:name=".Aboutus"
+        android:exported="false"/>
+    <activity
         android:name=".SignUpActivity"
         android:exported="false" />
     <activity
@@ -33,6 +39,7 @@ package="com.example.project">
         android:exported="true">
 
     </activity>
+
 </application>
 
 </manifest>

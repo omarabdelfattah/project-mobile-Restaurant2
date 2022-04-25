@@ -48,6 +48,7 @@
         app:layout_constraintVertical_bias="0.153" />
 
     <Button
+        android:onClick="Inputuser"
         android:id="@+id/createacc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,6 +61,7 @@
         app:layout_constraintVertical_bias="0.781" />
 
     <EditText
+        android:hint="password"
         android:id="@+id/spassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,6 +75,7 @@
         app:layout_constraintVertical_bias="0.465" />
 
     <EditText
+        android:hint="confirm password"
         android:id="@+id/spassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,6 +89,7 @@
         app:layout_constraintVertical_bias="0.576" />
 
     <EditText
+        android:hint="Email address"
         android:id="@+id/semail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -98,43 +102,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.675" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email address"
-        app:layout_constraintBottom_toTopOf="@+id/semail"
-        app:layout_constraintEnd_toEndOf="@+id/semail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/semail"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="confirm password"
-        app:layout_constraintBottom_toTopOf="@+id/spassword2"
-        app:layout_constraintEnd_toEndOf="@+id/spassword2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/spassword2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="password"
-        app:layout_constraintBottom_toTopOf="@+id/spassword"
-        app:layout_constraintEnd_toEndOf="@+id/spassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/spassword"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
     <EditText
+
+        android:hint="name"
         android:id="@+id/susername"
         android:layout_width="210dp"
         android:layout_height="40dp"
@@ -144,18 +114,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.272" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="username"
-        app:layout_constraintBottom_toTopOf="@+id/susername"
-        app:layout_constraintEnd_toEndOf="@+id/susername"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/susername"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -209,6 +167,7 @@
         app:srcCompat="@drawable/logo" />
 
     <EditText
+        android:hint="phone number"
         android:id="@+id/sphonenum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -220,17 +179,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.365" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phone number"
-        app:layout_constraintBottom_toTopOf="@+id/sphonenum"
-        app:layout_constraintEnd_toEndOf="@+id/sphonenum"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/sphonenum"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

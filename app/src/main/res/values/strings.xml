@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">project</string>
+    <string name="app_name">El-Akel</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="or">or</string>
+    <string name="login">login</string>
+    <string name="password">password</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="e_mail_or_username">E-mail or username</string>
+    <string name="need_account">need account?</string>
+    <string name="sign_up">sign up</string>
+    <string name="login1">login</string>
 </resources>
