@@ -4,13 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.*;
 
 public class log_in extends AppCompatActivity {
@@ -23,10 +29,14 @@ public class log_in extends AppCompatActivity {
 
     public int userId = 0;
 
+    String Username ,passWord,conPass,Email_Address,phone;
+
+
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         userName = findViewById(R.id.userName);
@@ -34,21 +44,28 @@ public class log_in extends AppCompatActivity {
         logIn = findViewById(R.id.button3);
         signUp = findViewById(R.id.signUpLink);
 
+        loadCurrentUser();
+        if (Username!=null)
+        {
+            userName.setText(Username);
+        }
 
 
         //adding testing accounts
         Account acc1 = new Account("hady","1234","0123456789","hady@gmail.com");
-        Account acc2 = new Account("joe","1234","0123456789","joe@gmail.com");
-        Account acc3 = new Account("seka","1234","0123456789","seka@gmail.com");
+        Account acc2 = new Account("joe","1234","012387789","joe@gmail.com");
+        Account acc3 = new Account("seka","1234","01234566789","seka@gmail.com");
         Account.users.add(acc1);
         Account.users.add(acc2);
         Account.users.add(acc3);
 
-        Account adm = new Account("admin","12345","0123456789","example@gmail.com");
+
+        Account adm = new Account("admin","12345","0123456789","admin@gmail.com");
 
         Account.admins.add(adm);
         //end of adding testing accounts
 
+        loadCurrentUser();
 
         logIn.setOnClickListener(new View.OnClickListener()
         {
@@ -77,8 +94,10 @@ public class log_in extends AppCompatActivity {
         else
         {
             int login = login();
-            switch (login) {
-                case 1: {
+            switch (login)
+            {
+                case 1:
+                {
                     Toast.makeText(log_in.this, "logged in succesfully!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(this, MainActivity.class);
                     intent.putExtra("email", Account.users.get(userId).getE_mail());
@@ -86,7 +105,8 @@ public class log_in extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 }
-                case 2: {
+                case 2:
+                {
                     Toast.makeText(this, "Admin logged in", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(this, Admin.class);
                     startActivity(intent);
@@ -101,6 +121,7 @@ public class log_in extends AppCompatActivity {
     }
     public int login()
     {
+
         String userText = userName.getText().toString();
         String passText = password.getText().toString();
 
@@ -119,10 +140,30 @@ public class log_in extends AppCompatActivity {
                 userId = i ;
                 return 2;
             }
-
         }
         return 0;
     }
+
+
+
+    private void loadCurrentUser()
+    {
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        Username      = sharedPreferences.getString("username", null);
+        passWord      = sharedPreferences.getString("password", null);
+        phone         = sharedPreferences.getString("phone", null);
+        Email_Address = sharedPreferences.getString("email", null);
+
+        if(Username != null)
+        {
+            Account current =  new Account(Username,passWord,phone,Email_Address);
+            Account.users.add(current);
+        }
+
+        Log.e( "loadData: ", Account.users.toString());
+    }
+
+
 
 
 }

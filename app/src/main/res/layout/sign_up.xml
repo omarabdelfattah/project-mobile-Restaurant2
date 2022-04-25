@@ -48,10 +48,11 @@
         app:layout_constraintVertical_bias="0.153" />
 
     <Button
-        android:onClick="Inputuser"
         android:id="@+id/createacc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FF9800"
+        android:onClick="Inputuser"
         android:text="create account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
