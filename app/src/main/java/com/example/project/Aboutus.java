@@ -50,17 +50,7 @@ public class Aboutus extends AppCompatActivity
             }
         });
 
-            Button location = findViewById(R.id.btn_Location);
-            location.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Uri gmmIntentUri = Uri.parse("google.navigation:q=31.207553,29.918972");
-                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                    mapIntent.setPackage("com.google.android.apps.maps");
-                    startActivity(mapIntent);
 
-                }
-            });
 
 
 
