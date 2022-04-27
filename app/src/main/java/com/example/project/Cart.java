@@ -2,6 +2,7 @@ package com.example.project;
 
 import android.app.Notification;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.core.app.NotificationCompat;
@@ -31,6 +32,7 @@ public class Cart extends Fragment {
     private String mParam2;
     private NumberPicker np;
     private Button btn;
+    private RadioButton btnCredit,btnCash;
     private NotificationManagerCompat notificationManager;
 
     public Cart() {
@@ -72,6 +74,21 @@ public class Cart extends Fragment {
         btn = rootView.findViewById(R.id.submit);
         notificationManager  = NotificationManagerCompat.from(this.getContext());
 
+        // on click credit
+//        btnCredit = rootView.findViewById(R.id.credit);
+//        btnCredit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                btnCash.setChecked(false);
+//            }
+//        });
+//        btnCash = rootView.findViewById(R.id.credit);
+//        btnCash.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                btnCredit.setChecked(false);
+//            }
+//        });
         // On click submit
         btn = rootView.findViewById(R.id.submit);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -130,7 +147,9 @@ public class Cart extends Fragment {
                 .setContentText("Your meal is arriving in 25 minutes")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 })
+                .setLights(Color.RED, 3000, 3000)
                 .build();
         notificationManager.notify(3,notification);
     }
-}
+ }
