@@ -3,20 +3,16 @@ package com.example.project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -31,13 +27,6 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-//        list_fragment list_fragment=new list_fragment();
-//        FragmentManager fragmentManager=getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-//        fragmentTransaction.add(R.id.home,list_fragment);
-//        fragmentTransaction.commit();
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
         bottomNav.setOnNavigationItemSelectedListener(navListener );
@@ -72,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     Fragment selectedFargment = null;
                     switch (item.getItemId())
                     {
-                        case R.id.home1:
+                        case R.id.home:
                             selectedFargment = new Home();
                             break;
                         case R.id.cartfrag:
@@ -113,9 +102,11 @@ public class MainActivity extends AppCompatActivity {
                 currentStatue = wifiStateExtra;
             }
         }
-
-
-
-
     };
+    public void Location(View L){
+        Uri gmmIntentUri = Uri.parse("google.navigation:q=31.207553,29.918972");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
+    }
 }

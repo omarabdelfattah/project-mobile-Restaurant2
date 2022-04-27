@@ -159,14 +159,16 @@
         app:tint="@color/black" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/Location"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:padding="10dp"
-        android:text="Feedback"
+        android:text="Location"
         android:textColor="@color/black"
         android:textSize="25dp"
+        android:onClick="Location"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@id/icon_contact_support"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -179,7 +181,7 @@
         android:layout_height="2dp"
         android:layout_marginTop="7dp"
         android:background="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/Location" />
     // info
 
     <ImageView
@@ -211,7 +213,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/icon_info"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/Location"
         app:layout_constraintVertical_bias="0.0" />
 
     <!--    <View-->
