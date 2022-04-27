@@ -32,7 +32,6 @@ public class Cart extends Fragment {
     private String mParam2;
     private NumberPicker np;
     private Button btn;
-    private RadioButton btnCredit,btnCash;
     private NotificationManagerCompat notificationManager;
 
     public Cart() {
@@ -74,21 +73,6 @@ public class Cart extends Fragment {
         btn = rootView.findViewById(R.id.submit);
         notificationManager  = NotificationManagerCompat.from(this.getContext());
 
-        // on click credit
-//        btnCredit = rootView.findViewById(R.id.credit);
-//        btnCredit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                btnCash.setChecked(false);
-//            }
-//        });
-//        btnCash = rootView.findViewById(R.id.credit);
-//        btnCash.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                btnCredit.setChecked(false);
-//            }
-//        });
         // On click submit
         btn = rootView.findViewById(R.id.submit);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -132,6 +116,10 @@ public class Cart extends Fragment {
         np.setMaxValue(100);
 
         np =  rootView.findViewById(R.id.numberPicker8);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
+        np =  rootView.findViewById(R.id.numberPicker9);
         np.setMinValue(1);
         np.setMaxValue(100);
 
