@@ -7,10 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Product extends AppCompatActivity
 {
-
+    ImageView iv;
+    TextView tv,tv_dis,price;
+    Meil m;
 
 
     @Override
@@ -18,6 +22,17 @@ public class Product extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_product);
+
+        iv=findViewById(R.id.iv2);
+        tv=findViewById(R.id.tv2);
+        tv_dis=findViewById(R.id.tv_dis);
+        price=findViewById(R.id.price);
+        m = new Meil();
+        m = (Meil) getIntent().getSerializableExtra("data");
+        iv.setImageResource(m.getImg());
+        tv.setText(m.getName());
+        tv_dis.setText(m.getDis());
+        price.setText(m.getPrice());
     }
     public void back(View v)
     {

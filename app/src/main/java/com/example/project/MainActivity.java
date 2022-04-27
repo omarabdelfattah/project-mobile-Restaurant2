@@ -3,6 +3,8 @@ package com.example.project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
@@ -29,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+//        list_fragment list_fragment=new list_fragment();
+//        FragmentManager fragmentManager=getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+//        fragmentTransaction.add(R.id.home,list_fragment);
+//        fragmentTransaction.commit();
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
         bottomNav.setOnNavigationItemSelectedListener(navListener );
@@ -63,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     Fragment selectedFargment = null;
                     switch (item.getItemId())
                     {
-                        case R.id.home:
+                        case R.id.home1:
                             selectedFargment = new Home();
                             break;
                         case R.id.cartfrag:
@@ -104,5 +113,9 @@ public class MainActivity extends AppCompatActivity {
                 currentStatue = wifiStateExtra;
             }
         }
+
+
+
+
     };
 }
