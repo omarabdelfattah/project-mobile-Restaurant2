@@ -5,9 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -59,11 +61,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             TextView tv_name;
             ImageView iv;
             TextView price;
+            CardView cardView;
+            LinearLayout ln;
         public meilsViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_name= itemView.findViewById(R.id.meil_custom_tv);
             iv= itemView.findViewById(R.id.meil_custom_image);
             price=itemView.findViewById(R.id.meil_custom_price);
+
+
+
 
         }
     }

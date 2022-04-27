@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     Fragment selectedFargment = null;
                     switch (item.getItemId())
                     {
-                        case R.id.home:
+                        case R.id.home1:
                             selectedFargment = new Home();
                             break;
                         case R.id.cartfrag:
@@ -104,10 +104,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-    public void Location(View L){
+    public void Location(View L)
+    {
         Uri gmmIntentUri = Uri.parse("google.navigation:q=31.207553,29.918972");
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         startActivity(mapIntent);
     }
+
 }

@@ -25,7 +25,7 @@ public class log_in extends AppCompatActivity {
 
     private TextView signUp;
 
-    public int userId = 0;
+    public static int userId = 0;
 
     String Username ,passWord,conPass,Email_Address,phone;
 

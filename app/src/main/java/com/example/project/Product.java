@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Product extends AppCompatActivity
 {
@@ -16,6 +18,7 @@ public class Product extends AppCompatActivity
     TextView tv,tv_dis,price;
     Meil m;
 
+    NumberPicker np;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,7 +36,18 @@ public class Product extends AppCompatActivity
         tv.setText(m.getName());
         tv_dis.setText(m.getDis());
         price.setText(m.getPrice());
+        np =findViewById(R.id.numberPicker);
+        np.setMinValue(1);
+        np.setMaxValue(100);
     }
+
+    public void added(View v)
+    {
+        Intent intent = new Intent(this,MainActivity.class);
+        Toast.makeText(this, "Meal added!!!🍔", Toast.LENGTH_SHORT).show();
+        startActivity(intent);
+    }
+
     public void back(View v)
     {
         Intent intent = new Intent(this,MainActivity.class);

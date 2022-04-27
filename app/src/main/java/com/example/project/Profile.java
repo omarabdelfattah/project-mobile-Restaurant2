@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 public class Profile extends Fragment {
 
     private TextView email_xml , phone_xml;
+    private String phone,email;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -65,8 +66,18 @@ public class Profile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
-        String phone = getActivity().getIntent().getExtras().getString("phone");
-        String email = getActivity().getIntent().getExtras().getString("email");
+        if(getActivity().getIntent().hasExtra("phone"))
+        {
+             phone = getActivity().getIntent().getExtras().getString("phone");
+             email = getActivity().getIntent().getExtras().getString("email");
+        }
+        else
+        {
+            phone = Account.users.get(log_in.userId).getPhone();
+            email = Account.users.get(log_in.userId).getE_mail();
+
+        }
+
 
         email_xml = (TextView)  rootView.findViewById(R.id.email1);
         phone_xml = (TextView)  rootView.findViewById(R.id.phone1);
