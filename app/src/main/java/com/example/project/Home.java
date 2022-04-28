@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 public class Home extends Fragment {
 
-    public CardView c1, c2, c3, c4, c5, c6, c7, c8;
+
 
 
     // TODO: Rename parameter arguments, choose names that match

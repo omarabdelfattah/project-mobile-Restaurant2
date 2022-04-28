@@ -17,7 +17,7 @@ public class Product extends AppCompatActivity
     ImageView iv;
     TextView tv,tv_dis,price;
     Meil m;
-
+    offer_items s;
     NumberPicker np;
 
     @Override
@@ -31,11 +31,21 @@ public class Product extends AppCompatActivity
         tv_dis=findViewById(R.id.tv_dis);
         price=findViewById(R.id.price);
         m = new Meil();
+        if(getIntent().hasExtra("data")){
         m = (Meil) getIntent().getSerializableExtra("data");
         iv.setImageResource(m.getImg());
         tv.setText(m.getName());
         tv_dis.setText(m.getDis());
-        price.setText(m.getPrice());
+        price.setText(m.getPrice());}
+        else{
+         s = (offer_items) getIntent().getSerializableExtra("data2");
+         iv.setImageResource(s.getImg());
+         tv.setText(s.getName());
+         tv_dis.setText(s.getDis());
+         price.setText(s.getOld_price()+" "+s.getNew_price());
+
+
+        }
         np =findViewById(R.id.numberPicker);
         np.setMinValue(1);
         np.setMaxValue(100);
