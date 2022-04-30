@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent)
         {
+
              wifiStateExtra = intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE,WifiManager.WIFI_STATE_UNKNOWN);
             if (wifiStateExtra == WifiManager.WIFI_STATE_ENABLED && currentStatue != wifiStateExtra)
             {
