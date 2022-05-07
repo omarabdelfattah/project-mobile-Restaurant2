@@ -2,6 +2,7 @@ package com.example.project2;
 
 import android.app.Notification;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.core.app.NotificationCompat;
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.*;
 
 /**
@@ -117,6 +119,10 @@ public class Cart extends Fragment {
         np.setMinValue(1);
         np.setMaxValue(100);
 
+        np =  rootView.findViewById(R.id.numberPicker9);
+        np.setMinValue(1);
+        np.setMaxValue(100);
+
 
         return rootView;
     }
@@ -129,7 +135,9 @@ public class Cart extends Fragment {
                 .setContentText("Your meal is arriving in 25 minutes")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 })
+                .setLights(Color.RED, 3000, 3000)
                 .build();
         notificationManager.notify(3,notification);
     }
-}
+ }

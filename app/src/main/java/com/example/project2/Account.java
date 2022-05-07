@@ -8,6 +8,7 @@ public class Account
     private String pass;
     private String Phone;
     private String E_mail;
+
     //the Accounts data
     public static ArrayList<Account> users = new ArrayList<Account>();
     public static ArrayList<Account> admins = new ArrayList<Account>();
@@ -32,7 +33,10 @@ public class Account
     //end of the Accounts data
 
 
-    public Account(String name, String pass, String phone, String e_mail) {
+
+
+    public Account(String name, String pass, String phone, String e_mail)
+    {
         this.name = name;
         this.pass = pass;
         Phone = phone;
@@ -73,5 +77,17 @@ public class Account
 
     public void setE_mail(String e_mail) {
         E_mail = e_mail;
+    }
+
+    //save every account as a string in a shared preferences and call it then
+    @Override
+    public String toString()
+    {
+        return "Account{" +
+                "name='" + name + '\'' +
+                ", pass='" + pass + '\'' +
+                ", Phone='" + Phone + '\'' +
+                ", E_mail='" + E_mail + '\'' +
+                '}';
     }
 }

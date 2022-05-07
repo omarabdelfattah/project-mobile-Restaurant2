@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,10 +27,10 @@
         app:layout_constraintTop_toTopOf="parent"
 
         />
-    //Email
+    //Name
 
     <ImageView
-        android:id="@+id/icon_email"
+        android:id="@+id/icon_name"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_margin="10dp"
@@ -41,6 +45,42 @@
         app:tint="@color/black" />
 
     <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Your name"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/icon_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon_name"
+        app:layout_constraintTop_toTopOf="@id/icon_name" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/icon_name" />
+
+    //Email
+
+    <ImageView
+        android:id="@+id/icon_email"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_email_24"
+        android:textAlignment="center"
+        android:textSize="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_name"
+
+        app:tint="@color/black" />
+
+    <TextView
         android:id="@+id/email1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -51,7 +91,7 @@
         app:layout_constraintBottom_toBottomOf="@id/icon_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/icon_email"
-        app:layout_constraintTop_toTopOf="@id/icon_email" />
+        app:layout_constraintTop_toTopOf="@id/icon_email"/>
 
     <View
         android:layout_width="match_parent"
@@ -155,14 +195,16 @@
         app:tint="@color/black" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/Location"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:padding="10dp"
-        android:text="Feedback"
+        android:text="Location"
         android:textColor="@color/black"
         android:textSize="25dp"
+        android:onClick="Location"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@id/icon_contact_support"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -175,7 +217,7 @@
         android:layout_height="2dp"
         android:layout_marginTop="7dp"
         android:background="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/Location" />
     // info
 
     <ImageView
@@ -207,7 +249,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/icon_info"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/Location"
         app:layout_constraintVertical_bias="0.0" />
 
     <!--    <View-->
@@ -242,3 +284,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

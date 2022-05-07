@@ -5,6 +5,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import android.app.Notification;
+import android.app.NotificationManager;
 import android.os.Bundle;
 import android.view.View;
 
@@ -39,7 +40,7 @@ public class Admin extends AppCompatActivity {
         Notification notification1 = new NotificationCompat.Builder(this,App.CHANNEL_1_ID)
                 .setSmallIcon(R.drawable.logo)
                 .setContentTitle(name + " Arrived!!")
-                .setContentText(description + "with price"+price+"$")
+                .setContentText(description + " with price "+price+"$")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();
@@ -56,7 +57,7 @@ public class Admin extends AppCompatActivity {
         Notification notification2 = new NotificationCompat.Builder(this,App.CHANNEL_2_ID)
                 .setSmallIcon(R.drawable.logo)
                 .setContentTitle(name + "Offer Arrived!!")
-                .setContentText(description + "with price"+newPrice+"$ instead of " + oldPrice+"$")
+                .setContentText(description + " with price "+newPrice+"$ instead of " + oldPrice+"$")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();

@@ -48,10 +48,11 @@
         app:layout_constraintVertical_bias="0.153" />
 
     <Button
-        android:onClick="Inputuser"
         android:id="@+id/createacc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FF9800"
+        android:onClick="Inputuser"
         android:text="create account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,7 +156,7 @@
         app:layout_constraintVertical_bias="0.862" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/iv2"
         android:layout_width="94dp"
         android:layout_height="95dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -3,12 +3,22 @@ package com.example.project2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import static android.view.View.*;
 
 public class log_in extends AppCompatActivity {
 
@@ -32,94 +42,66 @@ public class log_in extends AppCompatActivity {
         signUp = findViewById(R.id.signUpLink);
 
 
-
-        //adding testing accounts
-        Account acc1 = new Account("hady","1234","0123456789","hady@gmail.com");
-        Account acc2 = new Account("joe","1234","0123456789","joe@gmail.com");
-        Account acc3 = new Account("seka","1234","0123456789","seka@gmail.com");
-        Account.users.add(acc1);
-        Account.users.add(acc2);
-        Account.users.add(acc3);
-
-        Account adm = new Account("admin","12345","0123456789","example@gmail.com");
-
-        Account.admins.add(adm);
-        //end of adding testing accounts
-
-
-        logIn.setOnClickListener(new View.OnClickListener()
-        {
+        logIn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
-                Activity_Navigation(0);
+            public void onClick(View view) {
+                if(TextUtils.isEmpty(userName.getText().toString()) || TextUtils.isEmpty(password.getText().toString())){
+                    Toast.makeText(log_in.this,"Username and password required",Toast.LENGTH_LONG).show();
+                }else{
+                    // Proceed to login
+                    login();
+                }
             }
         });
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+
+
+//
+    }
+
+    public void login(){
+        LoginRequest loginRequest = new LoginRequest();
+        loginRequest.setEmail(userName.getText().toString());
+        loginRequest.setPassword(password.getText().toString());
+
+        Call<LoginResponse> loginResponseCall = ApiClient.getUserService().userLogin(loginRequest);
+        loginResponseCall.enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onClick(View view)
-            {
-                Activity_Navigation(1);
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                if(response.isSuccessful()){
+                    Toast.makeText(log_in.this,"Login Successfull",Toast.LENGTH_LONG).show();
+                    LoginResponse loginResponse = response.body();
+
+                    Log.d("token",loginResponse.getaccess_token());
+                    Log.d("name",loginResponse.getUser().getname());
+
+                    SharedPreferences session_info = getSharedPreferences("SESSION_INFO", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = session_info.edit();
+
+                    editor.putString("name", loginResponse.getUser().getname()).commit();
+                    editor.putString("email", loginResponse.getUser().getemail()).commit();
+                    editor.putString("phone", loginResponse.getUser().getPhone()).commit();
+                    editor.putString("credit_card", loginResponse.getUser().getCredit_card()).commit();
+                    editor.putString("access_token",loginResponse.getaccess_token()).commit();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(
+                                    new Intent(log_in.this,MainActivity.class)
+                                         );
+                        }
+                    },700);
+                }else{
+                    Toast.makeText(log_in.this,"Login Failed",Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                Log.d("error",t.getLocalizedMessage());
+                Toast.makeText(log_in.this,"error : "+t.getLocalizedMessage(),Toast.LENGTH_LONG).show();
             }
         });
     }
-    public void Activity_Navigation(int i)
-    {
-        if (i==1)
-        {
-            Intent intent = new Intent(this , SignUpActivity.class);
-            startActivity(intent);
-        }
-        else
-        {
-            int login = login();
-            switch (login) {
-                case 1: {
-                    Toast.makeText(log_in.this, "logged in succesfully!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this, MainActivity.class);
-                    intent.putExtra("email", Account.users.get(userId).getE_mail());
-                    intent.putExtra("phone", Account.users.get(userId).getPhone());
-                    startActivity(intent);
-                    break;
-                }
-                case 2: {
-                    Toast.makeText(this, "Admin logged in", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this, Admin.class);
-                    startActivity(intent);
-                    break;
-                }
-                case 0:
-                    Toast.makeText(this, "wrong username or password try Again", Toast.LENGTH_SHORT).show();
-                    break;
-            }
-        }
-
-    }
-    public int login()
-    {
-        String userText = userName.getText().toString();
-        String passText = password.getText().toString();
-
-        for (int i =0 ; i<Account.users.size() ; ++i)
-        {
-            if (userText.equals(Account.users.get(i).getName())&&passText.equals(Account.users.get(i).getPass()))
-            {
-                userId = i ;
-                return 1;
-            }
-        }
-        for (int i =0 ; i<Account.admins.size() ; ++i)
-        {
-            if (userText.equals(Account.admins.get(i).getName())&&passText.equals(Account.admins.get(i).getPass()))
-            {
-                userId = i ;
-                return 2;
-            }
-
-        }
-        return 0;
-    }
-
-
 }

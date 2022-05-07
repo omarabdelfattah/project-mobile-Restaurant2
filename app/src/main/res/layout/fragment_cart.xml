@@ -8,9 +8,6 @@
     android:orientation="vertical"
     tools:context=".Cart">
 
-
-
-
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -914,7 +911,7 @@
                         android:ems="10"
                         android:gravity="start|top"
                         android:inputType="textMultiLine"
-                        android:text="Enter Your Location"
+                        android:hint="Enter Your Location"
                         android:textSize="14dp" />
 
 
@@ -923,96 +920,50 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:gravity="left"
-                android:orientation="vertical"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="10dp">
 
-                <LinearLayout
+
+                <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:gravity="left"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:paddingHorizontal="22dp">
 
-                    <ImageView
-                        android:id="@+id/coin"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/coin" />
 
-                    <TextView
-                        android:id="@+id/addresss"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="4"
-                        android:text="Payment method"
-                        android:textColor="@color/black"
-                        android:textSize="24dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:gravity="left"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="20dp">
-
-                    <ImageView
-                        android:id="@+id/cash_img"
-                        android:layout_width="20dp"
-                        android:layout_height="fill_parent"
-                        android:src="@drawable/coin"
-                        android:textAlignment="center"
-                        android:textSize="20dp"
-                        app:layout_constraintStart_toStartOf="parent" />
 
                     <RadioButton
                         android:id="@+id/cash"
-                        android:layout_width="wrap_content"
+                        android:layout_width="190dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="7dp"
-                        android:text="Cash on delivery" />
+                        android:text="Cash on delivery"
+                        android:drawableRight="@drawable/coin"
+                        />
 
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:gravity="left"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="22dp">
-
-                    <ImageView
-                        android:id="@+id/credit_img"
-                        android:layout_width="20dp"
-                        android:layout_height="fill_parent"
-                        android:src="@drawable/credit"
-                        android:textAlignment="center"
-                        android:textSize="20dp"
-                        app:layout_constraintStart_toStartOf="parent" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/cash_img"-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:src="@drawable/coin"  />-->
 
                     <RadioButton
                         android:id="@+id/credit"
-                        android:layout_width="wrap_content"
+                        android:layout_width="190dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="7dp"
+                        android:drawableRight="@drawable/credit"
                         android:text="Credit" />
 
 
-                </LinearLayout>
+<!--                    <ImageView-->
+<!--                        android:id="@+id/credit_img"-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:src="@drawable/credit" />-->
+
+                </RadioGroup>
 
 
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

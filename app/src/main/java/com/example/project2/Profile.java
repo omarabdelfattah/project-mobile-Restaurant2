@@ -1,13 +1,23 @@
 package com.example.project2;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.LinearLayout.LayoutParams;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,7 +26,7 @@ import android.widget.TextView;
  */
 public class Profile extends Fragment {
 
-    private TextView email_xml , phone_xml;
+    private TextView email_xml , phone_xml, name_xml, credit_card_xml;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -57,6 +67,7 @@ public class Profile extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -64,14 +75,30 @@ public class Profile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
-        String phone = getActivity().getIntent().getExtras().getString("phone");
-        String email = getActivity().getIntent().getExtras().getString("email");
 
-        email_xml = (TextView)  rootView.findViewById(R.id.email1);
+        SharedPreferences session_info = this.getContext().getSharedPreferences("SESSION_INFO", MODE_PRIVATE);
+
+//        if(intent.getExtras() != null ){
+//            Log.d("name",intent.getStringExtra("name"));
+//        }
+
+        String name = session_info.getString("name", "").toString();
+        String email = session_info.getString("email", "").toString();
+        String phone = session_info.getString("phone", "").toString();
+        String credit_card = session_info.getString("credit_card", "").toString();
+
+        name_xml = (TextView)  rootView.findViewById(R.id.name);
         phone_xml = (TextView)  rootView.findViewById(R.id.phone1);
+        email_xml = (TextView)  rootView.findViewById(R.id.email1);
+        credit_card_xml = (TextView)  rootView.findViewById(R.id.credit);
+
         phone_xml.setText(phone);
         email_xml.setText(email);
+        name_xml.setText(name);
+        credit_card_xml.setText(credit_card);
         return rootView;
     }
+
+
 
 }
