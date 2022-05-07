@@ -14,35 +14,35 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.meilsViewHolder> {
-    ArrayList<Meil> Meils;
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.mealsViewHolder> {
+    ArrayList<Meal> Meals;
 
-    public RecyclerViewAdapter(ArrayList<Meil> Meil) {
-        this.Meils = Meil;
+    public RecyclerViewAdapter(ArrayList<Meal> Meal) {
+        this.Meals = Meal;
     }
 
     @NonNull
     @Override
-    public meilsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public mealsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-       View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.meil_custom_item,null,false);
+       View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.meal_custom_item,null,false);
 
-        return new meilsViewHolder(v);
+        return new mealsViewHolder(v);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull meilsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull mealsViewHolder holder, int position) {
 
-        Meil meil=Meils.get(position);
-        holder.tv_name.setText(meil.getName());
-        holder.iv.setImageResource(meil.getImg());
-        holder.price.setText(meil.getPrice());
+        Meal meal=Meals.get(position);
+        holder.tv_name.setText(meal.getName());
+        holder.iv.setImageResource(meal.getImg());
+        holder.price.setText(meal.getPrice());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                Intent i=new Intent(view.getContext(),Product.class);
-                i.putExtra("data", meil);
+                i.putExtra("data", meal);
                 view.getContext().startActivity(i);
 
             }
@@ -52,22 +52,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return Meils.size();
+        return Meals.size();
     }
 
 
 
-    class meilsViewHolder extends RecyclerView.ViewHolder{
+    class mealsViewHolder extends RecyclerView.ViewHolder{
             TextView tv_name;
             ImageView iv;
             TextView price;
             CardView cardView;
             LinearLayout ln;
-        public meilsViewHolder(@NonNull View itemView) {
+        public mealsViewHolder(@NonNull View itemView) {
             super(itemView);
-            tv_name= itemView.findViewById(R.id.meil_custom_tv);
-            iv= itemView.findViewById(R.id.meil_custom_image);
-            price=itemView.findViewById(R.id.meil_custom_price);
+            tv_name= itemView.findViewById(R.id.meal_custom_tv);
+            iv= itemView.findViewById(R.id.meal_custom_image);
+            price=itemView.findViewById(R.id.meal_custom_price);
 
 
 

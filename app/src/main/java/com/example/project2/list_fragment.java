@@ -19,20 +19,20 @@ public class list_fragment extends Fragment {
         RecyclerView rv;
         rv= (RecyclerView) view.findViewById(R.id.rec);
 
-        ArrayList<Meil> meils=new ArrayList<>();
-        meils.add(new Meil(R.drawable.pizzza,"pizzza","its a gragjiajfjagiaj","20$"));
-        meils.add(new Meil(R.drawable.pizzza,"pizzza2","dddddddddddddddddddddddddddddddd","25$"));
-        meils.add(new Meil(R.drawable.pizzza,"pizzza","its a gragjiajfjagiaj","20$"));
-        meils.add(new Meil(R.drawable.pizzza,"pizzza","its a gragjiajfjagiaj","20$"));
-        meils.add(new Meil(R.drawable.pizzza,"pizzza","its a gragjiajfjagiaj","20$"));
+        ArrayList<Meal> meals=new ArrayList<>();
+        meals.add(new Meal(R.drawable.pizzza,"pizzza","its a gragjiajfjagiaj","20$"));
+        meals.add(new Meal(R.drawable.pizzza,"pizzza2","dddddddddddddddddddddddddddddddd","25$"));
+        meals.add(new Meal(R.drawable.pizzza,"pizzza","its a gragjiajfjagiaj","20$"));
+        meals.add(new Meal(R.drawable.pizzza,"pizzza","its a gragjiajfjagiaj","20$"));
+        meals.add(new Meal(R.drawable.pizzza,"pizzza","its a gragjiajfjagiaj","20$"));
 
-        meils.add(new Meil(R.drawable.burger,"burgeer","burgeeeeeeeeeeeeer1","15$"));
-        meils.add(new Meil(R.drawable.burger,"burgeer2","basic one","12$"));
-
-
+        meals.add(new Meal(R.drawable.burger,"burgeer","burgeeeeeeeeeeeeer1","15$"));
+        meals.add(new Meal(R.drawable.burger,"burgeer2","basic one","12$"));
 
 
-        RecyclerViewAdapter adapter=new RecyclerViewAdapter(meils);
+
+
+        RecyclerViewAdapter adapter=new RecyclerViewAdapter(meals);
         RecyclerView.LayoutManager lm=new GridLayoutManager(getContext(),2);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(lm);

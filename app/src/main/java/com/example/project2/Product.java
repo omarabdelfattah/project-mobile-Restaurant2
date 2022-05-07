@@ -16,7 +16,7 @@ public class Product extends AppCompatActivity
 {
     ImageView iv;
     TextView tv,tv_dis,price;
-    Meil m;
+    Meal m;
     offer_items s;
     NumberPicker np;
 
@@ -30,9 +30,9 @@ public class Product extends AppCompatActivity
         tv=findViewById(R.id.tv2);
         tv_dis=findViewById(R.id.tv_dis);
         price=findViewById(R.id.price);
-        m = new Meil();
+        m = new Meal();
         if(getIntent().hasExtra("data")){
-        m = (Meil) getIntent().getSerializableExtra("data");
+        m = (Meal) getIntent().getSerializableExtra("data");
         iv.setImageResource(m.getImg());
         tv.setText(m.getName());
         tv_dis.setText(m.getDis());

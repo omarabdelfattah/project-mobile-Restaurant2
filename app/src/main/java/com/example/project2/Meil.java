@@ -3,7 +3,7 @@ package com.example.project2;
 
 import java.io.Serializable;
 
-class Meil implements Serializable {
+class Meal implements Serializable {
     private  String dis;
     private int img;
     private String name;
@@ -12,10 +12,10 @@ class Meil implements Serializable {
 
 
 
-    public Meil() {
+    public Meal() {
 
     }
-    public Meil(int img, String name, String dis, String price){
+    public Meal(int img, String name, String dis, String price){
         this.img=img;
         this.name=name;
         this.dis=dis;
